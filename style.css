@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(212, 45%, 89%);
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Container for centering */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+/* QR Card styling */
+.qr-card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  padding: 16px;
+  max-width: 320px;
+  width: 100%;
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* QR Image container */
+.qr-image {
+  background-color: #3685FF;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.qr-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+/* Card content */
+.card-content {
+  padding: 0 16px 16px;
+}
+
+.card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: hsl(218, 44%, 22%);
+  margin-bottom: 16px;
+  line-height: 1.27;
+}
+
+.card-description {
+  font-size: 15px;
+  font-weight: 400;
+  color: hsl(216, 15%, 48%);
+  line-height: 1.33;
+}
+
+/* Responsive design */
+@media screen and (max-width: 375px) {
+  .container {
+    padding: 20px 16px;
+  }
+  
+  .qr-card {
+    max-width: 100%;
+  }
+  
+  .card-title {
+    font-size: 21px;
+  }
+  
+  .card-description {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .qr-card {
+    max-width: 320px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.qr-card:focus-within {
+  outline: 2px solid #3685FF;
+  outline-offset: 2px;
+}
